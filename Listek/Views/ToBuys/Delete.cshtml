@@ -1,0 +1,32 @@
+﻿@model Listek.Models.ToBuy
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h3>Odstrani izdelek</h3>
+
+<h4>Ali ste prepričani da želite odstraniti izdelek?</h4>
+
+<div>
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Izdelek)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Izdelek)
+    </dd>
+
+</dl>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Odstrani" class="btn btn-default"/> |
+        @Html.ActionLink("Nazaj na listek", "Index", null, new { @class = "povezava" })
+    </div>
+}
+</div>

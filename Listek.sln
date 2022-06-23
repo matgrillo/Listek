@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listek", "Listek\Listek.csproj", "{8D896D75-5E2C-4693-9F70-FDF7FD9FB053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D896D75-5E2C-4693-9F70-FDF7FD9FB053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D896D75-5E2C-4693-9F70-FDF7FD9FB053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D896D75-5E2C-4693-9F70-FDF7FD9FB053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D896D75-5E2C-4693-9F70-FDF7FD9FB053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A70B7FCA-7201-47B6-B496-3991C57361EF}
+	EndGlobalSection
+EndGlobal

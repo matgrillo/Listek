@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNet.Identity
+@using Listek.Controllers
+@model Listek.Models.ToBuy
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2></h2>
+
+@* tabela tableDiv, ki se posodablja *@
+<div id="tableDiv"></div>
+
+<div id="tobuyCreateFrom">
+    @using (Ajax.BeginForm("AJAXCreate", "ToBuys", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "tableDiv"
+    }))
+    {
+        <div class="form-group">
+            @Html.AntiForgeryToken()
+            <div>
+                @Html.EditorFor(model => model.Izdelek, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Izdelek, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    }
+</div>
+
+
+@section scripts{
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Custom_Scripts/BuildTable.js"></script>
+    <script src="~/Custom_Scripts/Upor.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

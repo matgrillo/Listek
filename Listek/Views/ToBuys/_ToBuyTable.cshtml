@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Listek.Models.ToBuy>
+
+@* osnovna tabela nakupovalnega listka *@
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @if (item.Nakup) //če je izdelek kupljen se podčrta
+                {
+                    <div class="kupljeno">@Html.DisplayFor(modelItem => item.Izdelek)</div>
+                   
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.Izdelek)
+                }
+            </td>
+            <td>
+                @* checkbox za opravljen nakup, vsak nakup ima svoj id *@
+                @Html.CheckBoxFor(modelItem => item.Nakup, new { id = item.Id, @class = "ActiveCheck" })
+            </td>
+            <td>
+                @Html.ActionLink("Uredi", "Edit", new { id = item.Id, @class = "povezava" })
+                @Html.ActionLink("Odstrani", "Delete",new { id = item.Id, @class = "povezava" })
+            </td>
+        </tr>
+    }
+
+</table>
+@*skripta za checkbox, ki se kliče vsakiv ko updejtamo tabelo *@
+
+<script src="~/Custom_Scripts/AddCheckBoxListener.js"></script> 
+
+@*partial view, tabela, ki jo vidimo kot nas listek in se posodablja brez page refresha*@
+
+
