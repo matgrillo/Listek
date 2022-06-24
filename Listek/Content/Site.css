@@ -33,6 +33,8 @@ textarea {
 /* stil za stvari na nakupovalnem listku*/
 .kupljeno {
     text-decoration: line-through;
+    background-color: #E9967A;
+    opacity: .4;
 }
 
 .povezava 
